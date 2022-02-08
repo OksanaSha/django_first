@@ -35,7 +35,6 @@ def time_view(request):
 def workdir_view(request):
     workdir_files = os.listdir(path='.')
     workdir_files = ', '.join(workdir_files)
-
     # по аналогии с `time_view`, напишите код,
     # который возвращает список файлов в рабочей 
     # директории
