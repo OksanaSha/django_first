@@ -23,10 +23,6 @@ class ScopeInlineFormset(BaseInlineFormSet):
         return super().clean()
 
 
-
-
-
-
 class ScopeInline(admin.TabularInline):
     model = Scope
     formset = ScopeInlineFormset
