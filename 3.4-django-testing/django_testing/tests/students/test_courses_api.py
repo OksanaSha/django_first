@@ -26,9 +26,9 @@ def course():
 @pytest.mark.django_db
 def test_get_course(course, client):
     course = course()
-    response = client.get('/api/v1/courses/')
+    response = client.get(f'/api/v1/courses/{course.id}/')
     assert response.status_code == 200
-    assert response.json()[0]['name'] == course.name
+    assert response.json()['name'] == course.name
 
 
 @pytest.mark.django_db
